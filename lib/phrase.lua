@@ -71,7 +71,7 @@ end
 
 function Phrase:note()
   if self.ind > 0 then 
-    do return self.note+self.notes[self.ind] end
+    do return self.root+self.notes[self.ind] end
   end
 end
 

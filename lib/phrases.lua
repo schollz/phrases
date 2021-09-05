@@ -16,6 +16,7 @@ end
 function Phrases:reset()
   self.started=false
   self.next,self.last=1,1  
+  self.division=0
 end
 
 function Phrases:add(p)
@@ -49,9 +50,10 @@ function Phrases:step(i,j)
 end
 
 function Phrases:emit(division)
-  if division==self.phrases[self.next].division then
+  if division==self.division or self.division==0 then
+    self.division=self.phrases[self.next].division
     self.next,self.last,self.note=self:step(self.next,self.last)
-    print(self.note)
+    do return self.note end
   end
 end
 
