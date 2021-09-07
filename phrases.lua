@@ -1,10 +1,11 @@
--- atree
-
+-- phrases
+-- requires synthy
+-- see code for changing phrases
 
 engine.name="Synthy"
 local lattice=require("lattice")
-local phrases=include("atree/lib/phrases")
-local phrase=include("atree/lib/phrase")
+local phrases=include("phrases/lib/phrases")
+local phrase=include("phrases/lib/phrase")
 local synthy={notes={}}
 
 
@@ -67,3 +68,4 @@ function init()
   sequencer:hard_restart()
 
 end
+
